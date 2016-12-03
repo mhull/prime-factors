@@ -54,13 +54,7 @@
 		this.run = function() {
 
 			// make sure we have a valid number
-			if( isNaN( this.n ) ) {
-				this.response.push('Please enter a number.');
-				return;
-			}
-
 			if( this.n < 2 ) {
-				this.response.push( 'Please enter an integer greater than 1' );
 				return;
 			}
 
@@ -237,19 +231,20 @@
 		 */
 		this.report = function() {
 
-			solutionDiv.innerHTML = '<h2>Solution</h2>';
-
-			this.response.forEach(function( statement ) {
-				solutionDiv.innerHTML += '<p>' + statement + '</p>';
-			});
-
 			var factorization = this.getFactorization();
 			if( ! factorization ) {
 				answerDiv.innerHTML = '<p class="fail">You entered an invalid number.  Try any integer greater than 1.</p>';
 				return;
 			}
+
 			answerDiv.innerHTML = '<p class="success">' + this.getFactorization() + 
 				( this.isPrime ? ' is prime' : '' ) + '</p>';
+
+			solutionDiv.innerHTML = '<h2>Solution</h2>';
+
+			this.response.forEach(function( statement ) {
+				solutionDiv.innerHTML += '<p>' + statement + '</p>';
+			});
 		}
 
 	} // Factorer()
