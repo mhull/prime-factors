@@ -1,7 +1,8 @@
 # Prime Factorizer
 
-This is a simple HTML form that can factor integers into prime numbers when submitted. [In the demo](https://mhull.github.io/prime-factors),
-you can enter any integer and find out its prime factorization.
+This is a plain-looking HTML form that can factor integers into prime numbers when submitted and explain how it arrived at the solution.
+
+[In the demo](https://mhull.github.io/prime-factors), you can enter any integer and find out its prime factorization.
 
 It is [provable](https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic#Proof) that all integers greater than 1 (no matter how large) have a unique Prime Factorization.  For an example using a small number, the prime factorization of `24` is given by <code>24 = 2<sup>3</sup>&middot;3</code>. 
 
